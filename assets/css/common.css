@@ -1,0 +1,307 @@
+@charset "UTF-8";
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #f4f2ed;
+    color: #4D4D4D;
+    font-family: "Noto Serif JP","sans-serif";
+    font-style: normal;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 0.14px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    }
+
+.section {
+    padding: 120px 12.5%;
+    position: relative;
+    overflow: hidden;
+}
+
+.pcImg {
+    display: none;
+}
+
+.gif {
+    position: absolute;
+    z-index: 50;
+    max-width: 150%;
+    pointer-events: none;
+}
+
+.gif1 {
+    left: -50px;
+    bottom: -200px;
+    width: 108%;
+}
+
+.gif2 {
+    width: 60%;
+    right: -80px;
+    top: -50px;
+}
+
+.gif3 {
+    width: 50%;
+    left: -40px;
+    bottom: -20px;
+}
+
+.gif4 {
+    left: -80px;
+    top: 370px;
+}
+
+.fadeIn {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.fadeIn.animated {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+@media screen and (min-width: 1150px) {
+    body {
+        font-size: 14px;
+        line-height: 28px; /* 150% */
+        letter-spacing: 0.14px;
+    }
+    
+    .pcImg {
+        display: block;
+    }
+    
+    .spImg {
+        display: none;
+    }
+
+    .section {
+        margin-left: 7%;
+    }
+}/* pc 700px */
+
+
+@media screen and (min-width: 700px) {
+.gif1 {
+    left: -80px;
+    width: 106%;
+}
+
+.gif2 {
+    width: 30%;
+    right: -100px;
+    top: -100px;
+}
+
+.gif3 {
+    width: 30%;
+    left: -100px;
+    bottom: 0;
+}
+
+.gif4 {
+    left: -260px;
+    top: 90px;
+}
+}
+
+
+
+
+
+/* header */
+.nav {
+    background-color: rgba(244, 242, 237, 0.85);
+    backdrop-filter: blur(6px);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    padding: 0 6.4%;
+    transform: translateY(-100%);
+    transition: transform 0.4s;
+}
+
+.nav__btn {
+    width: 100%;
+    padding: 16px 0;
+    text-align: center;
+    background-color: #E2E1DA;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header__btn {
+    width: 100%;
+    position: fixed;
+    padding: 16px 0;
+    text-align: center;
+    background-color: #E2E1DA;
+    z-index: 100;
+}
+
+.section--mainImg{
+    padding: 0;
+}
+
+.nav.active {
+    transform: translateY(0%);
+}
+
+.logo {
+    font-size: 3.2rem;
+    margin-top: 253px;
+    margin-bottom: 60px;
+    line-height: 1.4;
+}
+
+.logo__subtitle {
+    font-size: 1.5rem;
+}
+
+.link {
+    margin-bottom: 60px;
+    font-size: 1.6rem;
+}
+.link__item {
+    margin-bottom: 21px;
+}
+
+.header__sns {
+    position: absolute;
+}
+
+.header__sns--svg:first-of-type {
+    margin-right: 21px;
+}
+
+.header__img {
+    display: none;
+}
+
+@media screen and (min-width: 1150px) {
+    .header__btn {
+        position: fixed;
+        left: 0;
+        width: 7%;
+        height: 100%;
+    }
+
+    .header__btn--svg {
+        position: absolute;
+        top: 50%;
+        transform: translateY(50%);
+        left: 25%;
+        width: 46px;
+        height: 28px;
+    }
+
+    .nav {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding: 0 13%;
+        z-index: 100;
+        transform: translateX(-100%);
+        transition: transform 0.4s;
+    }
+
+    .logo {
+        margin-top: 360px;
+    }
+
+    .header__img {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 124px;
+    }
+
+    .nav__btn {
+        left: 0;
+        width: 7%;
+        height: 100vh;
+    }
+
+}/* pc 700px */
+
+
+
+/* 見出し */
+.topic {
+    font-size: 2.3rem;
+    line-height: 33px;
+    margin-top: 53px;
+}
+
+.topic__subtitle {
+    display: block;
+    color: var(--accent, #1D775C);
+    font-family: "Gilda Display";
+    font-size: 1.2rem;
+    letter-spacing: 0.48px;
+    line-height: 14px;
+}
+
+
+
+.footer {
+    background-color: #B6B4A2;
+    padding: 37px 13% 17px;
+}
+
+.footer__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+}
+
+.footer__sns {
+    display: flex;
+    gap: 21px;
+}
+
+.footer__topic {
+    font-size: 2.3rem;
+}
+
+.footer__txt {
+    margin-top: 10px;
+}
+
+small {
+    display: block;
+    text-align: center;
+    font-family: "Gilda Display";
+    font-size: 1.2rem;
+    letter-spacing: 0.48px;
+    margin-top: 41px;
+}
+
+
+@media screen and (min-width: 1150px) {
+    .footer {
+        margin-left: 7.1%;
+    }
+    
+    small {
+        margin-top: 22px;
+    }
+}
